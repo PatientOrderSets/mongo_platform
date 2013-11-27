@@ -1,0 +1,29 @@
+<h1>Listing lunches</h1>
+
+<table>
+  <tr>
+    <th>Food item</th>
+    <th>Cost</th>
+    <th>Rating</th>
+    <th>Lunch date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lunches.each do |lunch| %>
+  <tr>
+    <td><%= lunch.food_item %></td>
+    <td><%= lunch.cost %></td>
+    <td><%= lunch.rating %></td>
+    <td><%= lunch.lunch_date %></td>
+    <td><%= link_to 'Show', user_lunch_path %></td>
+    <td><%= link_to 'Edit', edit_user_lunch_path(lunch) %></td>
+    <td><%= link_to 'Destroy', user_lunch_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<!-- <%= link_to 'New Lunch', new_lunch_path %> -->

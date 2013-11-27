@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  food_item: 
+  cost: 
+  rating: 
+  lunch_date: 2013-11-27
+
+two:
+  food_item: 
+  cost: 
+  rating: 
+  lunch_date: 2013-11-27

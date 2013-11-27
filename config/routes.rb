@@ -1,5 +1,10 @@
 MongoPlatform::Application.routes.draw do
-  get "books/index"
+  resources :restaurants
+
+  resources :lunches
+  resources :users do
+    resources :lunches
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +55,7 @@ MongoPlatform::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'books#index'
+  root :to => 'users#index'
 
   # See how all your routes lay out with "rake routes"
 

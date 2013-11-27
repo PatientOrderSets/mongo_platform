@@ -41,6 +41,10 @@ GEM
     database_cleaner (1.2.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    faker (1.2.0)
+      i18n (~> 0.5)
+    geocoder (1.1.8)
+    gmaps4rails (2.1.0)
     hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.5)
@@ -120,6 +124,7 @@ GEM
     uglifier (2.3.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.5.2)
 
 PLATFORMS
   ruby
@@ -127,6 +132,9 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   database_cleaner (~> 1.2.0)
+  faker (~> 1.2.0)
+  geocoder
+  gmaps4rails
   jquery-rails
   minitest (~> 4.7.5)
   minitest-reporters (~> 0.14.0)
@@ -135,3 +143,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   therubyracer
   uglifier (>= 1.0.3)
+  underscore-rails
