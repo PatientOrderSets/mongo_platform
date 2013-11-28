@@ -47,7 +47,7 @@ class LunchesController < ApplicationController
 
     respond_to do |format|
       if @lunch.save
-        format.html { redirect_to user_lunch_path(@user, @lunch), notice: 'Lunch was successfully created.' }
+        format.html { redirect_to user_path(@user), notice: 'Lunch was successfully created.' }
         format.json { render json: @lunch, status: :created, location: @lunch }
       else
         format.html { render action: "new" }

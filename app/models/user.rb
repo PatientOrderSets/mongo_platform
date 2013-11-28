@@ -7,10 +7,13 @@ class User
   field :password,              type: String
   field :location,              type: Array
   field :address,               type: String
+  field :image,                 type: String
+  field :restaurant_id,         type: Moped::BSON::ObjectId
 
   has_many :lunches
+  belongs_to :restaurant, :foreign_key => 'restaurant_id'
 
-  validates_presence_of :email, :first_name, :last_name, :password, :address
+  validates_presence_of :email, :first_name, :last_name, :password, :address, :image
   before_save :set_location
 
   def set_location

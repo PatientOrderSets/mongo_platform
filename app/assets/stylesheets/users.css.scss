@@ -1,3 +1,327 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'Sans-Serif';
+}
+
+body {
+  background: #000;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#navigation {
+  background: #000;
+  color: #fff;
+  height: 50px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 99999;
+}
+
+#logo{
+  margin-top: -21px;
+}
+
+#logo h1 a {
+  font-size: 18px;
+  line-height: 1em;
+  margin: 16px 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+#logo h1 a span {
+  color: #ff9900;
+}
+
+#logo h1 a em {
+  font-family: 'Georgia', 'Sans-Serif';
+  font-style: italic;
+  margin-left: -4px;
+}
+
+#logo h1 a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+#nav-actions {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+
+#sign-up-button {
+  border: 1px solid #666;
+  color: #ddd;
+}
+
+#sign-up-button:hover {
+  background: none;
+  border-color: #ff9900;
+}
+
+#main-container {
+  margin-top: 70px;
+  position: relative;
+  z-index: 3;
+}
+
+#cover {
+  background: url('http://i.imgur.com/RcRWTwT.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.wfl-card-wrap {
+  margin-bottom: 20px;
+}
+
+.wfl-card {
+  background: white;
+  padding: 20px;
+}
+
+.wfl-card {
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
+  padding: 0 0 20px;
+}
+
+.wfl-card .featured-block {
+  position: relative;
+}
+
+.wfl-card .featured-block .featured-title {
+  color: #fff;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  z-index: 3;
+}
+
+.wfl-card .featured-block .featured-title span {
+  background: rgba(0,0,0,0.7);
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1em;
+  padding: 10px 15px;
+}
+
+.wfl-card .featured-block .featured-image {
+  background: #000;
+  margin-bottom: 25px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.wfl-card .featured-block .featured-image img {
+  display: block;
+  margin: 0 auto;
+  opacity: 0.75;
+}
+
+.wfl-card .user-avatar {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -ms-border-radius: 500px;
+  -o-border-radius: 500px;
+  border-radius: 500px;
+  background: #333;
+  height: 120px;
+  left: 50%;
+  margin: -90px 0 0 -60px;
+  position: absolute;
+  overflow: hidden;
+  top: 180px;
+  width: 120px;
+  z-index: 2;
+  border: 3px solid #333;
+}
+
+.wfl-card .user-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.wfl-card .user-info .user-name {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.wfl-card .user-info .user-email {
+  color: #777;
+}
+
+.user-info .form-style-label{
+  margin-top: 7px;
+}
+
+.user-info .form-style-input{
+  margin-bottom: 10px;
+}
+
+.wfl-card.user-block .user-actions{
+  margin-left: 20px;
+}
+
+.wfl-card.user-block .user-actions a{
+  text-decoration: none;
+
+}
+
+.wfl-card .user-profile {
+  text-align: center;
+}
+
+.wfl-card.food-block .featured-block .featured-image {
+  height: 250px;
+  margin: 0;
+}
+
+.wfl-card.food-block .food-info {
+  text-align: left;
+}
+
+.wfl-card.food-block .food-info .food-items {
+  border-bottom: 1px dotted #ccc;
+}
+
+.wfl-card.food-block .food-info .food-items .item-name{
+  display: inline-block;
+}
+
+.wfl-card.food-block .food-info .food-items span {
+  color: #999;
+  padding-right: 10px;
+  float: right;
+}
+
+.wfl-card.food-block .food-meta {
+  border-top: 1px solid #eee;
+  font-size: 0.85em;
+  line-height: 1em;
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.wfl-card.food-block .food-meta .date {
+  color: #999;
+}
+
+#new_lunch select,
+#new_user select{
+  border-radius: 3px;
+  background: none;
+  border: 1px solid #ccc;
+  color: #000;
+  font-size: 12px;
+  line-height: 1em;
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 40px;
+}
+
+#new_lunch select{
+  margin-bottom: 0px;
+}
+
+#new_lunch #lunch_restaurant_id{
+  margin-bottom: 40px;
+}
+
+#new_lunch .user-profile input,
+#new_user .user-profile input{
+  position: absolute;
+  display: block;
+  bottom: 20px;
+  right: 50px;
+}
+
+#new_lunch .user-profile input,
+#new_user .user-profile input,
+.wfl-btn {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  background: none;
+  border: 3px solid #000;
+  color: #000;
+  font-size: 12px;
+  line-height: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 12px;
+}
+
+.wfl-btn:hover {
+  background: #eee;
+}
+
+.wfl-modal {
+  float: none;
+  margin: 0 auto;
+}
+
+.wfl-modal .wfl-card .user-avatar {
+  position: relative;
+  margin: 40px auto 20px;
+  top: inherit;
+  left: inherit;
+}
+
+.user-page {
+  background: #f2f2f2;
+}
+
+.user-page #cover {
+  display: none;
+}
+
+.user-page #user-hero {
+  margin-bottom: 20px;
+}
+
+.user-page #user-hero .wfl-card .featured-block .featured-image {
+  height: 300px;
+}
+
+.user-page #user-hero .wfl-card .user-avatar {
+  top: 300px;
+}
+
+#user-hero {
+  margin-bottom: 20px;
+}

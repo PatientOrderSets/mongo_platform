@@ -1,47 +1,66 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
-<p>
-  <b>First Name</b>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <b>Last Name:</b>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @user.address %>
-</p>
-
-<p>
-  <b>Lunches:</b>
-
-  <% @user.lunches.each do |lunch| %>
-  <p>
-      <i><%= lunch.restaurant.name %></i>,
-      <%= lunch.food_item %>,
-      $<%= lunch.cost %>,
-      Rating: <%= lunch.rating %>
-  </p>
-  <% end %>
-
-</p>
-<script type="text/javascript">
- $ ->
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
-</script>
-
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+<div id="main-container" class="container">
+    <p id="notice"><%= notice %></p>
+    <div id="user-hero">
+        <div class="wfl-card user-block">
+            <div class="featured-block">
+                <div class="user-avatar">
+                    <img src="<%= @user.image %>">
+                </div>
+                <div class="featured-image">
+                    <img src="<%= @user.restaurant.image %>">
+                </div>
+            </div>
+            <div class="user-info">
+                <div class="user-name">
+                    <%= @user.first_name %> <%= @user.last_name %>
+                </div>
+                <div class="user-email">
+                    <%= @user.email %>
+                </div>
+                <div class="user-email">
+                    <%= @user.location %>
+                </div>
+            </div>
+            <div class="user-actions">
+                <%= link_to 'Edit Profile', edit_user_path(@user) %> | <%= link_to 'Add Lunch', new_user_lunch_path(@user) %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <% @user.lunches.each do |lunch| %>
+            <div class="col-md-4 wfl-card-wrap">
+                <div class="wfl-card food-block">
+                    <div class="featured-block">
+                        <div class="featured-title">
+                            <span><%= lunch.restaurant.name %></span>
+                        </div>
+                        <div class="featured-image">
+                            <img src="<%= lunch.restaurant.image %>">
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <div class="food-info">
+                            <div class="food-items clearfix">
+                                <div class="item-name"><%= lunch.food_item %></div>
+                                <span>$<%= lunch.cost %></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-meta row">
+                        <div class="date col-md-6">
+                            November 23, 2013
+                        </div>
+                        <div class="rating col-md-6">
+                            <strong>Rating</strong>: <%= lunch.rating %> / 5
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
 </div>
+<div id="cover"></div>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+
 <%= link_to 'Back', users_path %>
